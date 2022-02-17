@@ -61,7 +61,7 @@ public class psMealServlet2 extends HttpServlet {
 		
 	}
 	//InputStreamをByte配列にする
-	public byte[] convertInputStreamToArray(InputStream inputStream) throws IOException {
+	public static byte[] convertInputStreamToArray(InputStream inputStream) throws IOException {
 		ByteArrayOutputStream buffer = new ByteArrayOutputStream();
 		int nRead;
 		byte[] data = new byte[16777215];	

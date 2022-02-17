@@ -4,30 +4,37 @@ pageEncoding="UTF-8"%>
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>撮影画面（食事）</title>
-<link rel="stylesheet" href="<%=request.getContextPath() %>/css/ps_meal.css">
+<title>撮影画面（薬の容器）</title>
+<link rel="stylesheet"
+href="<%=request.getContextPath()%>/css/ps_medicine.css">
 </head>
 <body>
 
+
+
 <header>
-<h1 class="headline">
-食事の写真を撮影しましょう！
-</h1>
-<p class="message">
-今日の食事の写真を撮影しましょう。<br>
-撮影したら撮った写真を送信しましょう。<br>
-下のボタンで撮影、送信ボタンで送信できます。
-</p>
+<h3>これから飲む薬です！</h3>
+<p>下の画像の薬が今回飲む薬です。</p>
 </header>
 
+
+
 <div class="contents">
-<button type="button" class="shot_btn">撮影する</button><br>
-<form action="" method="post"
+<img src="" alt="これから飲む薬の画像">
+<h2>飲んだ薬を撮影しましょう！</h2>
+<p>
+上の画像の薬を飲んだら飲んだ証拠として薬の空の容器などを撮影しましょう。<br> 撮影したら撮った写真を送信しましょう。<br>
+下の撮影ボタンで撮影、送信ボタンで送信できます。
+</p>
+<button type="button">撮影する</button>
+<form action="/ps_medicine/psMedicineServlet1" method="post"
 enctype="multipart/form-data">
-<input type="file" name="image" accept="image/*"><!--type="hidden"を入れる-->
-<button type="submit" class="submit_btn">送信</button>
+<input type="file" name="image2" accept="image/*">
+<button type="submit">送信する</button>
 </form>
 </div>
+
+
+
 </body>
 </html>
